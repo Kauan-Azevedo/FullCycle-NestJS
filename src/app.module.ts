@@ -6,9 +6,11 @@ import { DatabaseService } from "./database/database.service";
 import { TweetsModule } from "./tweets/tweets.module";
 import { SequelizeModule } from "@nestjs/sequelize";
 import { join } from "path";
+import { ScheduleModule } from "@nestjs/schedule"
 
 @Module({
   imports: [
+    ScheduleModule.forRoot(),
     SequelizeModule.forRoot({
       dialect: "sqlite",
       host: join(__dirname, "database.sqlite"),
@@ -20,4 +22,4 @@ import { join } from "path";
   controllers: [AppController, TestController],
   providers: [AppService, DatabaseService],
 })
-export class AppModule {}
+export class AppModule { }
