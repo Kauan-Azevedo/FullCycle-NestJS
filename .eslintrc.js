@@ -20,6 +20,7 @@ module.exports = {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-esliint/allow-empty': 'on',
     '@typescript-eslint/no-explicit-any': 'off',
     'indent': 'off',
   },
